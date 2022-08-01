@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/Products")
+@RequestMapping("/api/v1/products/src")
+@CrossOrigin("http://localhost:3000")
 
 public class SearchController {
     private SearchService searchService;

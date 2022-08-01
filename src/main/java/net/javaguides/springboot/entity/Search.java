@@ -24,9 +24,15 @@ public class Search {
     private long id;
     private String name;
     private String description;
+    private String details;
+    private long price;
     private String imageurl;
-    @CreationTimestamp
-    private LocalDateTime dateCreated;
-    @UpdateTimestamp
-    private LocalDateTime dateUpdated;
+//    private long id;
+//    private String name;
+//    private String description;
+//    private String imageurl;
+//    @CreationTimestamp
+//    private LocalDateTime dateCreated;
+//    @UpdateTimestamp
+//    private LocalDateTime dateUpdated;
 }

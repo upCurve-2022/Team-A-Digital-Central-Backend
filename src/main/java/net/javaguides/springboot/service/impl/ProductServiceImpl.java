@@ -6,6 +6,7 @@ import net.javaguides.springboot.service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -35,6 +36,18 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product deleteProduct(Product product) {
         return productRepository.save(product);
+    }
+
+    @Override
+    public List<Product> findAll() {
+        List<Product> products= productRepository.findAll();
+        return products;
+    }
+
+    @Override
+    public Product getProductById(long productId) {
+        Optional<Product> product = productRepository.findById(productId);
+        return product.get();
     }
 
 }
